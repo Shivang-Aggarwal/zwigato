@@ -1,5 +1,10 @@
 package com.fullstack.zwigato.auth_users.entity;
 
+import com.fullstack.zwigato.cart.entity.Cart;
+import com.fullstack.zwigato.order.entity.Order;
+import com.fullstack.zwigato.payment.entity.Payment;
+import com.fullstack.zwigato.review.entity.Review;
+import com.fullstack.zwigato.role.entity.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

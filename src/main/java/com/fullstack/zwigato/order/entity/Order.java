@@ -3,6 +3,7 @@ package com.fullstack.zwigato.order.entity;
 import com.fullstack.zwigato.auth_users.entity.User;
 import com.fullstack.zwigato.enums.OrderStatus;
 import com.fullstack.zwigato.enums.PaymentStatus;
+import com.fullstack.zwigato.payment.entity.Payment;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,7 +23,8 @@ import java.time.LocalDateTime;
 public class Order {
 
     @Id
-    @GeneratedValue(GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

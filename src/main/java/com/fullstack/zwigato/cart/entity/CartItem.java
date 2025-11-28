@@ -1,5 +1,6 @@
 package com.fullstack.zwigato.cart.entity;
 
+import com.fullstack.zwigato.menu.entity.Menu;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -2,6 +2,7 @@ package com.fullstack.zwigato.cart.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fullstack.zwigato.menu.dto.MenuDTO;
 import lombok.Data;
 
 import java.math.BigDecimal;

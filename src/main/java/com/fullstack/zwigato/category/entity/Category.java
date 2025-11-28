@@ -1,5 +1,6 @@
 package com.fullstack.zwigato.category.entity;
 
+import com.fullstack.zwigato.menu.entity.Menu;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

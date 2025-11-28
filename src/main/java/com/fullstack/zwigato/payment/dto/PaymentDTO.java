@@ -1,33 +1,41 @@
-package com.fullstack.zwigato.order.dto;
+package com.fullstack.zwigato.payment.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fullstack.zwigato.auth_users.dto.UserDTO;
-import com.fullstack.zwigato.enums.OrderStatus;
+import com.fullstack.zwigato.enums.PaymentGateway;
 import com.fullstack.zwigato.enums.PaymentStatus;
-import com.fullstack.zwigato.order.entity.OrderItem;
+import com.fullstack.zwigato.order.dto.OrderDTO;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class OrderDTO {
+public class PaymentDTO {
 
     private Long id;
 
-    private LocalDateTime localDateTime;
+    private Long orderId;
 
-    private BigDecimal totalAmount;
-
-    private OrderStatus orderStatus;
+    private BigDecimal amount;
 
     private PaymentStatus paymentStatus;
 
-    private UserDTO userDTO; // Customer who is ordering
+    private String transactionId;
 
-    private List<OrderItemDTO> orderItems;
+    private PaymentGateway paymentGateway;
+
+    private String failureReason;
+
+    private boolean success;
+
+    private LocalDateTime paymentDate;
+
+    private OrderDTO order;
+
+    private UserDTO user;
+
 }

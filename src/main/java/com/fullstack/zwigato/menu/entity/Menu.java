@@ -1,6 +1,8 @@
 package com.fullstack.zwigato.menu.entity;
 
 import com.fullstack.zwigato.category.entity.Category;
+import com.fullstack.zwigato.order.entity.OrderItem;
+import com.fullstack.zwigato.review.entity.Review;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity // marks this class as a database row
 @Data
